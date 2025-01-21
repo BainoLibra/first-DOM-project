@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: black;
+}
+.container{
+    margin: 100px;
+    color: aliceblue;
+}
+h1{
+    color: red;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 20px;
+}
+#skills{
+    margin: 20px;
+}
+#experience{
+    margin: 20px;
+}
+#education{
+    margin: 20px;
+}
+.column #skills li{
+    list-style: none;
+}
+.column #experience li{
+    list-style: none;
+}
+.column #education li{
+    list-style: none;
+}
+.row{
+    transition: 0.5s;
+    font-size: 20px;
+    cursor: pointer;
+}
+.row :hover{
+    color: red;
+}
+span{
+    color: red;
+}
+.column ul li{
+    margin: 10px 0;
+}
