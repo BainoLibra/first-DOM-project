@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container">
+        <div id="welcommesg">
+            <p>welcome</p>
+        </div>
         <div>
             <h1>About Me</h1>
             <p>Libra is an aspiring developer working on her first project about the Document Object Model (DOM).<br> Her goal is to explore how web pages can dynamically interact with users by manipulating HTML and CSS using JavaScript.<br> She is focusing on learning the basics of DOM structure, selecting elements, modifying their properties, <br> and creating interactive features for better user experiences. This project marks the beginning of her journey in web development.</p>
@@ -42,6 +45,12 @@
             </div>
         </div>
     </div>
-    <script src="/script.js"></script>
+    <!-- <script src="/first-DOM-project/script.js"></script> -->
+     <script>
+        document.body.style.backgroundColor="blue"
+        const title = "About Libra";
+        const welcommsg=document.getElementById("welcommesg");
+        welcommsg.textContent+=title===""?'Guest':title;
+     </script>
 </body>
 </html>
