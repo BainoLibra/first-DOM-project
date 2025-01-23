@@ -16,26 +16,26 @@
             <p>Libra is an aspiring developer working on her first project about the Document Object Model (DOM).<br> Her goal is to explore how web pages can dynamically interact with users by manipulating HTML and CSS using JavaScript.<br> She is focusing on learning the basics of DOM structure, selecting elements, modifying their properties, <br> and creating interactive features for better user experiences. This project marks the beginning of her journey in web development.</p>
         </div>
         <div class="row">
-            <p>Skills</p>
-            <p>Experience</p>
-            <p>Education</p>
+            <p class="row1 active-row" onclick="openrow('skills')">Skills</p>
+            <p class="row1" onclick="openrow('experience')">Experience</p>
+            <p class="row1" onclick="openrow('education')">Education</p>
         </div>
         <div class="column">
-            <div id="skills">
+            <div class="tab-content active-tab" id="skills">
                 <ul>
                     <li> <span>UI/UX</span> <br>Designing Web/ App interfaces</li>
                     <li> <span>Web development</span> <br>Web App development</li>
                     <li> <span>App development</span> <br>Building Android/ IOS Apps</li>
                 </ul>
             </div>
-            <div id="experience">
+            <div class="tab-content" id="experience">
                 <ul>
                     <li><span>2023-now</span><br>Icradle Innovations</li>
                     <li><span>2022-2023</span><br>Novuyo Services</li>
                     <li><span>2019-2022</span><br>Uganda Technology and Management University</li>
                 </ul>
             </div>
-            <div id="education">
+            <div class="tab-content" id="education">
                 <ul>
                     <li><span>2019-2022</span><br>Uganda Technology and Management University</li>
                     <li><span>2013-2018</span><br>St.Mary's College Rushoroza</li>
@@ -51,6 +51,20 @@
         const title = "";
         const welcommsg=document.getElementById("welcommesg");
         welcommsg.textContent+=title===""?'Guest':title;
+        
+        var row1 =document.getElementsByClassName("row1")
+        var tabContent = document.getElementsByClassName("tab-content")
+        
+        function openrow(rowname){
+            for (row of row1){
+                row.classList.remove("active-row");
+            }
+            for (tabContent of tabContent){
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-row")
+            document.getElementById(rowname).classList.add("active-tab")
+        }
      </script>
 </body>
 </html>

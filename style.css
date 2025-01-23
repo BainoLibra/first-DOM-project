@@ -28,15 +28,6 @@ h1{
 #education{
     margin: 20px;
 }
-.column #skills li{
-    list-style: none;
-}
-.column #experience li{
-    list-style: none;
-}
-.column #education li{
-    list-style: none;
-}
 .row{
     transition: 0.5s;
     font-size: 20px;
@@ -50,4 +41,26 @@ span{
 }
 .column ul li{
     margin: 10px 0;
+}
+.row1::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 100px;
+    bottom: 280px;
+    transition: 0.5s;
+}
+.row1.active-row::after{
+    width: 3%;
+}
+.column .tab-content li{
+    list-style: none;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
 }
